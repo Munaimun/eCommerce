@@ -6,7 +6,7 @@ import special from '../../assets/img/speacial.jpg'
 import beach from '../../assets/img/beach.jpg'
 import DirectoryComponent from "../../Component/category-component/Directory/DirectoryComponent"
 
-function Home() {
+const Home = () => {
     const categories = [
       {
         id: 1,
