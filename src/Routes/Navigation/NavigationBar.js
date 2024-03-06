@@ -18,11 +18,11 @@ const NavigationBar = () => {
                 <Link to="/contact" className='nav-link'>
                     CONTACT
                 </Link>
-                <Link to="/signin" className='nav-link'>
+                <Link to="/sign-in" className='nav-link'>
                     SIGN IN
                 </Link>
                 <Link className='nav-link'>
-                    LOGO
+                    CART LOGO
                 </Link>
             </div>
         </div>
