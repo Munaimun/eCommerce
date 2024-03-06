@@ -1,5 +1,6 @@
 import React from 'react'
 import { signInWithGogglePopup, createUserDocumentFromAuth } from '../utils/firebase/FirebaseUtils'
+import SignUpForm from './SignUpForm';
 
 const SignIn = () => {
 
@@ -12,6 +13,7 @@ const SignIn = () => {
     <div>
       SignIn Form
       <button onClick={logGoogleUser}>Sing-In with GooglePopup</button>
+      <SignUpForm />
     </div>
   )
 }
