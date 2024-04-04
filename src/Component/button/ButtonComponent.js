@@ -1,9 +1,15 @@
 import React from 'react'
+import './Button.scss'
 
-const Button = ({children}) => {
+const ButtonTypeClasses = {
+  google: 'google-sign-in',
+  inverted: 'inverted'
+}
+
+const Button = ({ children, buttontype, ...otherProps }) => {
   return (
-    <button className='button-conatiner'>{children}</button>
-    )
+    <button className={`button-container ${ButtonTypeClasses[buttontype]}`} {...otherProps}>{children}</button>
+  )
 }
 
 export default Button
