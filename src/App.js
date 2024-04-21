@@ -4,7 +4,7 @@ import Home from './Routes/Home/HomeComponent';
 import NavigationBar from './Routes/Navigation/NavigationBar';
 import Shop from './Component/Shop'
 import Contact from './Component/Contact'
-import SignIn from './Component/SignIn'
+import Authentication from './Component/Authentication'
 
 const App = () => {
   return(
@@ -13,7 +13,7 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path='shop' element={<Shop />} />
         <Route path='contact' element={<Contact />} />
-        <Route path='sign-in' element={<SignIn />} />
+        <Route path='auth' element={<Authentication />} />
       </Route>
     </Routes>
       )}
