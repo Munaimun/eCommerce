@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+
+import shop_data from "../shop-data.json";
 
 const Shop = () => {
   return (
-    <div>The Shop page</div>
-  )
-}
+    <div>
+      {shop_data.map(({ id, name }) => (
+        <div>{name}</div>
+      ))}
+    </div>
+  );
+};
 
-export default Shop
+export default Shop;

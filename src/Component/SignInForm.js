@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 
 import {
-  signInWithGogglePopup,
+  signInWithGooglePopup,
   signInAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../utils/firebase/FirebaseUtils";
@@ -27,7 +27,7 @@ const SignInForm = () => {
 
   const signInWithGoogle = async () => {
     try {
-      const { user } = await signInWithGogglePopup();
+      const { user } = await signInWithGooglePopup();
       await createUserDocumentFromAuth(user);
       setCurrentUser(user);
     } catch (error) {
