@@ -1,14 +1,20 @@
 import React, { Fragment, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 
-import "./NavigationBar.scss";
+import CartIcon from "../../Component/cart-icon/CartIcon";
+
+import { UserContext } from "../../context/userContext";
+import { CartContext } from "../../context/CartContext";
 
 import { ReactComponent as LOGO } from "../../assets/img/007 crown.svg";
-import { UserContext } from "../../context/userContext";
 import { signOutUser } from "../../utils/firebase/FirebaseUtils";
+
+import "./NavigationBar.scss";
+import CartDropdown from "../../Component/cart-dropdown/CartDropdown";
 
 const NavigationBar = () => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { isCartOpen } = useContext(CartContext);
 
   const signOutHandler = async () => {
     await signOutUser();
@@ -37,8 +43,11 @@ const NavigationBar = () => {
               SIGN IN
             </Link>
           )}
-          <Link className="nav-link">CART LOGO</Link>
+          <CartIcon />
         </div>
+
+        {/* if the both side is true then return the last item */}
+        {isCartOpen && <CartDropdown />}
       </div>
       <Outlet />
     </Fragment>
